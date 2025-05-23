@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Design Patterns Demo
 
-## Getting Started
+> Objetivo: mostrar de forma visual a diferenca entre solucoes sem nenhuma design pattern e soilucoes que aplicam-os.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Funcionalidades
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| pattern        | Como e demonstrado no projeto                                                               |
+| ------------- | ------------------------------------------------------------------------------------------- |
+| **Decorator** | Permite empilhar *condimentos* (leite, chocolate etc.) em uma bebida sem mamar com explosao de subclasses |
+| **Singleton** | Garante uma unica instancia de config global (taxa, nome da loja) em toda a aplicacao |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Cada padrao possui **duas rotas**:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Rota       | O que exibe                            |
+| ---------- | -------------------------------------- |
+| `/naive`   | implementacao **ingenua**     |
+| `/pattern` | Implementcao **com o Design Pattern** |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Como Executar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Instale** as deps (projeto feito com bun):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   bun i
+   ```
+3. **Inicie** o exemplo:
 
-## Deploy on Vercel
+   ```bash
+   bun run dev
+   ```
+4. Acesse no navegador:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   * `http://localhost:3000/naive`  – versao sem patterns
+   * `http://localhost:3000/pattern` – versao com Decorator + Singleton
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## explicacao rapida dos codigos
+
+### Decorator
+
+* **Ingenuo**: para cada combinacao de bebida + extra e criada uma nova subclasse, causando crescimento exponencial.
+* **Com Pattern**: as classes `Milk`, `Chocolate` etc. estendem um `CondimentDecorator` e recebem outra `Beverage` como argumento, permitindo composicao dinamica (`new Chocolate(new Milk(new Espresso()))`).
+
+### Singleton
+
+* **Ingenuo**: qualquer `import` pode criar `new AppConfigNaive()`, gerando varias isntancias e estados diferentes.
+* **Com Pattern**: `AppConfig.instance` entrega sempre a mesma intancia; o constructor e privado.
+
+---
+
+## stack
+
+* **Next.js** 14
+* **TypeScript**
+* **shadcn UI**
+
+---
