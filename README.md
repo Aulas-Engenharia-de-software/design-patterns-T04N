@@ -1,64 +1,16 @@
-## Passo a passo para utilização do Git
+# aplicacaocomdesing
 
-Siga os passos abaixo para entregar o projeto corretamente:
+A new Flutter project.
 
-### 1. Clone o repositório
+## Getting Started
 
-```bash
-git clone https://github.com/Aulas-Engenharia-de-software/design-patterns-T04N
-```
+This project is a starting point for a Flutter application.
 
----
+A few resources to get you started if this is your first Flutter project:
 
-### 2. Crie sua branch com o seu nome
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-Substitua `SEU_NOME` pelo seu nome completo, utilizando letras **maiúsculas** e separando com underline (`_`).
-
-```bash
-git checkout -b feature/SEU_NOME
-```
-
-**Exemplo:**
-
-```bash
-git checkout -b feature/LUCAS_RODRIGUES_MARTINS_OLIVEIRA
-```
-
----
-
-### 3. Dentro da branch, crie uma pasta com o seu nome
-
-Todo o seu trabalho deve estar **dentro dessa pasta**, nomeada com o seu nome completo no mesmo padrão:
-
-**Exemplo de pasta:** `LUCAS_RODRIGUES_MARTINS_OLIVEIRA`
-
----
-
-### 4. Adicione os arquivos do seu trabalho
-
-```bash
-git add .
-```
-
----
-
-### 5. Faça o commit e envie para o repositório remoto
-
-Utilize uma mensagem de commit descritiva:
-
-```bash
-git commit -m "feat: adicionando exemplos de Singleton"
-git push origin feature/SEU_NOME
-```
-
-**Exemplo:**
-
-```bash
-git push origin feature/LUCAS_RODRIGUES_MARTINS_OLIVEIRA
-```
-
----
-
-## 6. Após o trabalho estar concluído:
-- Abrir um pull request para a branch MASTER,
-- Somente será considerado concluído somente nesse passo.
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
