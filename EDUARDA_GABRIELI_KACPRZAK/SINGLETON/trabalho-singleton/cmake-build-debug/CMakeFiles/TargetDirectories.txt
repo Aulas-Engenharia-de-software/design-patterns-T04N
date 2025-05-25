@@ -1,0 +1,3 @@
+/Users/duardakacpk/CLionProjects/trabalho-singleton/cmake-build-debug/CMakeFiles/trabalho_singleton.dir
+/Users/duardakacpk/CLionProjects/trabalho-singleton/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/duardakacpk/CLionProjects/trabalho-singleton/cmake-build-debug/CMakeFiles/rebuild_cache.dir
