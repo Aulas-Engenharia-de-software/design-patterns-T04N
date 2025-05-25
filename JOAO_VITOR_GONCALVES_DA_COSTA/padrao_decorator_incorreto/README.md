@@ -3,7 +3,7 @@
 - Selecione a pasta
 
 ```
-  cd JOAO_VITOR_GONCALVES_DA_COSTA/padrao_strategy_incorreto
+  cd JOAO_VITOR_GONCALVES_DA_COSTA/padrao_decorator_incorreto
 ```
 
 - Instale as dependências
