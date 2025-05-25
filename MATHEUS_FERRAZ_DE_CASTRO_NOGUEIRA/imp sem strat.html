@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategy Pattern - Implementação Ingênua</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .payment-container { border: 1px solid #ccc; padding: 20px; max-width: 400px; }
+    .payment-methods { margin: 15px 0; }
+    label { display: block; margin: 5px 0; }
+    button { padding: 8px 15px; }
+    #paymentStatus { margin-top: 15px; padding: 10px; background: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <h1>Sistema de Pagamento sem Strategy Pattern</h1>
+  <div class="payment-container">
+    <h2>Processador de Pagamento</h2>
+    <div class="payment-methods">
+      <label>
+        <input type="radio" name="paymentMethod" value="credit" checked>
+        Cartão de Crédito
+      </label>
+      <label>
+        <input type="radio" name="paymentMethod" value="paypal">
+        PayPal
+      </label>
+      <label>
+        <input type="radio" name="paymentMethod" value="crypto">
+        Criptomoeda
+      </label>
+    </div>
+    <button id="processPayment">Pagar $100</button>
+    <div id="paymentStatus"></div>
+  </div>
+
+  <script>
+    const amount = 100;
+    const paymentStatusEl = document.getElementById('paymentStatus');
+    const processPaymentBtn = document.getElementById('processPayment');
+
+    processPaymentBtn.addEventListener('click', () => {
+      const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+      paymentStatusEl.textContent = '';
+      
+      if (paymentMethod === 'credit') {
+        // Lógica complexa para cartão de crédito
+        paymentStatusEl.textContent = `Processando pagamento de $${amount} via cartão de crédito...`;
+        setTimeout(() => {
+          paymentStatusEl.textContent = `Pagamento de $${amount} via cartão de crédito aprovado!`;
+        }, 2000);
+      } else if (paymentMethod === 'paypal') {
+        // Lógica complexa para PayPal
+        paymentStatusEl.textContent = `Processando pagamento de $${amount} via PayPal...`;
+        setTimeout(() => {
+          paymentStatusEl.textContent = `Pagamento de $${amount} via PayPal concluído!`;
+        }, 2000);
+      } else if (paymentMethod === 'crypto') {
+        // Lógica complexa para criptomoeda
+        paymentStatusEl.textContent = `Processando pagamento de $${amount} via criptomoeda...`;
+        setTimeout(() => {
+          paymentStatusEl.textContent = `Pagamento de $${amount} via criptomoeda confirmado!`;
+        }, 2000);
+      }
+    });
+  </script>
+</body>
+</html>

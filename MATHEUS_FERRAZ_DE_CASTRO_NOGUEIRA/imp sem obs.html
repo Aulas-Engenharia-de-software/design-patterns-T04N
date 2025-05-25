@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Observer Pattern - Implementação Ingênua</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .container { display: flex; gap: 20px; }
+    .panel { border: 1px solid #ccc; padding: 15px; border-radius: 5px; }
+    button { margin-top: 10px; }
+    ul { list-style-type: none; padding: 0; }
+  </style>
+</head>
+<body>
+  <h1>Aplicativo sem Observer Pattern</h1>
+  <div class="container">
+    <div id="userProfile" class="panel"></div>
+    <div id="activityFeed" class="panel"></div>
+    <div id="notificationCounter" class="panel"></div>
+  </div>
+
+  <script>
+    // Estado global
+    const globalNotifications = [];
+    let updateCount = 0;
+
+    // Elementos DOM
+    const userProfileEl = document.getElementById('userProfile');
+    const activityFeedEl = document.getElementById('activityFeed');
+    const counterEl = document.getElementById('notificationCounter');
+
+    // Função para atualizar todas as views manualmente
+    function updateAllViews() {
+      updateCount++;
+      renderUserProfile();
+      renderActivityFeed();
+      renderCounter();
+    }
+
+    // Renderizar perfil do usuário
+    function renderUserProfile() {
+      const notifications = [...globalNotifications];
+      
+      userProfileEl.innerHTML = `
+        <h2>João</h2>
+        <button id="simulateLike">Simular Like</button>
+        <div>
+          <h3>Notificações:</h3>
+          <ul>
+            ${notifications.map(note => `<li>${note}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+
+      document.getElementById('simulateLike').addEventListener('click', () => {
+        globalNotifications.push('Novo like na sua foto!');
+        updateAllViews();
+      });
+    }
+
+    // Renderizar feed de atividades
+    function renderActivityFeed() {
+      activityFeedEl.innerHTML = `
+        <h2>Atividade Recente</h2>
+        <ul>
+          ${globalNotifications.map(note => `<li>${note}</li>`).join('')}
+        </ul>
+      `;
+    }
+
+    // Renderizar contador
+    function renderCounter() {
+      counterEl.innerHTML = `<p>Atualizações: ${updateCount}</p>`;
+    }
+
+    // Inicializar
+    updateAllViews();
+  </script>
+</body>
+</html>

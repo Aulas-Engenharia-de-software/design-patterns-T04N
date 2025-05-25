@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Observer Pattern - Implementação com Pattern</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .container { display: flex; gap: 20px; }
+    .panel { border: 1px solid #ccc; padding: 15px; border-radius: 5px; }
+    button { margin-top: 10px; }
+    ul { list-style-type: none; padding: 0; }
+  </style>
+</head>
+<body>
+  <h1>Aplicativo com Observer Pattern</h1>
+  <div class="container">
+    <div id="userProfile1" class="panel"></div>
+    <div id="userProfile2" class="panel"></div>
+    <div id="activityFeed" class="panel"></div>
+    <div id="notificationCounter" class="panel"></div>
+  </div>
+
+  <script>
+    // Implementação do Observer
+    class NotificationObserver {
+      constructor() {
+        this.subscribers = [];
+        this.notifications = [];
+      }
+
+      subscribe(subscriber) {
+        this.subscribers.push(subscriber);
+        // Notificar o novo subscriber com o estado atual
+        subscriber.update(this.notifications);
+      }
+
+      unsubscribe(subscriber) {
+        this.subscribers = this.subscribers.filter(sub => sub !== subscriber);
+      }
+
+      notify(message) {
+        this.notifications.push(message);
+        this.subscribers.forEach(subscriber => {
+          subscriber.update(this.notifications);
+        });
+      }
+    }
+
+    // Criar instância do observer
+    const notificationObserver = new NotificationObserver();
+
+    // Elementos DOM
+    const userProfile1El = document.getElementById('userProfile1');
+    const userProfile2El = document.getElementById('userProfile2');
+    const activityFeedEl = document.getElementById('activityFeed');
+    const counterEl = document.getElementById('notificationCounter');
+
+    // Componente UserProfile
+    function createUserProfile(element, userName) {
+      element.innerHTML = `
+        <h2>${userName}</h2>
+        <button class="simulateLike">Simular Like</button>
+      `;
+
+      element.querySelector('.simulateLike').addEventListener('click', () => {
+        notificationObserver.notify(`Novo like na foto de ${userName}!`);
+      });
+    }
+
+    // Componente ActivityFeed
+    function createActivityFeed(element) {
+      const subscriber = {
+        update: function(notifications) {
+          element.innerHTML = `
+            <h2>Atividade Recente</h2>
+            <ul>
+              ${notifications.map(note => `<li>${note}</li>`).join('')}
+            </ul>
+          `;
+        }
+      };
+
+      notificationObserver.subscribe(subscriber);
+    }
+
+    // Componente NotificationCounter
+    function createNotificationCounter(element) {
+      let count = 0;
+      
+      const subscriber = {
+        update: function() {
+          count++;
+          element.innerHTML = `<p>Total de notificações: ${count}</p>`;
+        }
+      };
+
+      notificationObserver.subscribe(subscriber);
+    }
+
+    // Inicializar componentes
+    createUserProfile(userProfile1El, 'João');
+    createUserProfile(userProfile2El, 'Maria');
+    createActivityFeed(activityFeedEl);
+    createNotificationCounter(counterEl);
+  </script>
+</body>
+</html>

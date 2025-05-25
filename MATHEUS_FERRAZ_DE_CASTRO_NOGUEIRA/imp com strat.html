@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategy Pattern - Implementação com Pattern</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .payment-container { border: 1px solid #ccc; padding: 20px; max-width: 400px; }
+    .payment-methods { margin: 15px 0; }
+    label { display: block; margin: 5px 0; }
+    button { padding: 8px 15px; }
+    #paymentStatus { margin-top: 15px; padding: 10px; background: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <h1>Sistema de Pagamento com Strategy Pattern</h1>
+  <div class="payment-container">
+    <h2>Processador de Pagamento</h2>
+    <div class="payment-methods" id="paymentMethods"></div>
+    <button id="processPayment">Pagar $100</button>
+    <div id="paymentStatus"></div>
+  </div>
+
+  <script>
+    // Estratégias de pagamento
+    const paymentStrategies = {
+      credit: {
+        process: (amount, updateStatus) => {
+          updateStatus(`Processando pagamento de $${amount} via cartão de crédito...`);
+          setTimeout(() => {
+            updateStatus(`Pagamento de $${amount} via cartão de crédito aprovado!`);
+          }, 2000);
+        },
+        label: 'Cartão de Crédito'
+      },
+      paypal: {
+        process: (amount, updateStatus) => {
+          updateStatus(`Processando pagamento de $${amount} via PayPal...`);
+          setTimeout(() => {
+            updateStatus(`Pagamento de $${amount} via PayPal concluído!`);
+          }, 2000);
+        },
+        label: 'PayPal'
+      },
+      crypto: {
+        process: (amount, updateStatus) => {
+          updateStatus(`Processando pagamento de $${amount} via criptomoeda...`);
+          setTimeout(() => {
+            updateStatus(`Pagamento de $${amount} via criptomoeda confirmado!`);
+          }, 2000);
+        },
+        label: 'Criptomoeda'
+      }
+    };
+
+    // Configuração da UI
+    const amount = 100;
+    const paymentMethodsEl = document.getElementById('paymentMethods');
+    const paymentStatusEl = document.getElementById('paymentStatus');
+    const processPaymentBtn = document.getElementById('processPayment');
+
+    // Criar opções de pagamento dinamicamente
+    let selectedMethod = 'credit';
+    for (const [key, strategy] of Object.entries(paymentStrategies)) {
+      const methodId = `method_${key}`;
+      
+      paymentMethodsEl.innerHTML += `
+        <label>
+          <input type="radio" name="paymentMethod" value="${key}" id="${methodId}" 
+                 ${key === selectedMethod ? 'checked' : ''}>
+          ${strategy.label}
+        </label>
+      `;
+
+      document.getElementById(methodId).addEventListener('change', (e) => {
+        if (e.target.checked) {
+          selectedMethod = key;
+        }
+      });
+    }
+
+    // Função para atualizar o status
+    function updateStatus(message) {
+      paymentStatusEl.textContent = message;
+    }
+
+    // Processar pagamento
+    processPaymentBtn.addEventListener('click', () => {
+      paymentStatusEl.textContent = '';
+      const strategy = paymentStrategies[selectedMethod];
+      strategy.process(amount, updateStatus);
+    });
+  </script>
+</body>
+</html>
