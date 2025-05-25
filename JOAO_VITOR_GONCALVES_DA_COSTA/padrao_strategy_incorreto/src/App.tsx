@@ -32,7 +32,10 @@ function App() {
   function setStrategy(key: AvailableOptions) {
     if (!operatorNumber && !operatedNumber) {
       return;
-    } else if (operatorNumber && operatedNumber && key !== "restDivision") {
+    } if (key === "restDivision"  && (operatorNumber && operatedNumber)) {
+      handleCommonButtonClick("%");
+      return;
+    } else if (operatorNumber && operatedNumber) {
       calculate(true);
     }
 
