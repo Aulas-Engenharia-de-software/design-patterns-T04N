@@ -1,0 +1,14 @@
+C:\Users\kaueo\source\repos\StrategyPatternRaw\StrategyPatternRaw\bin\Debug\net8.0\StrategyPatternRaw.exe
+C:\Users\kaueo\source\repos\StrategyPatternRaw\StrategyPatternRaw\bin\Debug\net8.0\StrategyPatternRaw.deps.json
+C:\Users\kaueo\source\repos\StrategyPatternRaw\StrategyPatternRaw\bin\Debug\net8.0\StrategyPatternRaw.runtimeconfig.json
+C:\Users\kaueo\source\repos\StrategyPatternRaw\StrategyPatternRaw\bin\Debug\net8.0\StrategyPatternRaw.dll
+C:\Users\kaueo\source\repos\StrategyPatternRaw\StrategyPatternRaw\bin\Debug\net8.0\StrategyPatternRaw.pdb
+C:\Users\kaueo\source\repos\StrategyPatternRaw\StrategyPatternRaw\obj\Debug\net8.0\StrategyPatternRaw.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaueo\source\repos\StrategyPatternRaw\StrategyPatternRaw\obj\Debug\net8.0\StrategyPatternRaw.AssemblyInfoInputs.cache
+C:\Users\kaueo\source\repos\StrategyPatternRaw\StrategyPatternRaw\obj\Debug\net8.0\StrategyPatternRaw.AssemblyInfo.cs
+C:\Users\kaueo\source\repos\StrategyPatternRaw\StrategyPatternRaw\obj\Debug\net8.0\StrategyPatternRaw.csproj.CoreCompileInputs.cache
+C:\Users\kaueo\source\repos\StrategyPatternRaw\StrategyPatternRaw\obj\Debug\net8.0\StrategyPatternRaw.dll
+C:\Users\kaueo\source\repos\StrategyPatternRaw\StrategyPatternRaw\obj\Debug\net8.0\refint\StrategyPatternRaw.dll
+C:\Users\kaueo\source\repos\StrategyPatternRaw\StrategyPatternRaw\obj\Debug\net8.0\StrategyPatternRaw.pdb
+C:\Users\kaueo\source\repos\StrategyPatternRaw\StrategyPatternRaw\obj\Debug\net8.0\StrategyPatternRaw.genruntimeconfig.cache
+C:\Users\kaueo\source\repos\StrategyPatternRaw\StrategyPatternRaw\obj\Debug\net8.0\ref\StrategyPatternRaw.dll

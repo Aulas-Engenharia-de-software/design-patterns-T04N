@@ -1,0 +1,14 @@
+C:\Users\kaueo\source\repos\StrategyPatterSolve\StrategyPatterSolve\bin\Debug\net8.0\StrategyPatterSolve.exe
+C:\Users\kaueo\source\repos\StrategyPatterSolve\StrategyPatterSolve\bin\Debug\net8.0\StrategyPatterSolve.deps.json
+C:\Users\kaueo\source\repos\StrategyPatterSolve\StrategyPatterSolve\bin\Debug\net8.0\StrategyPatterSolve.runtimeconfig.json
+C:\Users\kaueo\source\repos\StrategyPatterSolve\StrategyPatterSolve\bin\Debug\net8.0\StrategyPatterSolve.dll
+C:\Users\kaueo\source\repos\StrategyPatterSolve\StrategyPatterSolve\bin\Debug\net8.0\StrategyPatterSolve.pdb
+C:\Users\kaueo\source\repos\StrategyPatterSolve\StrategyPatterSolve\obj\Debug\net8.0\StrategyPatterSolve.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaueo\source\repos\StrategyPatterSolve\StrategyPatterSolve\obj\Debug\net8.0\StrategyPatterSolve.AssemblyInfoInputs.cache
+C:\Users\kaueo\source\repos\StrategyPatterSolve\StrategyPatterSolve\obj\Debug\net8.0\StrategyPatterSolve.AssemblyInfo.cs
+C:\Users\kaueo\source\repos\StrategyPatterSolve\StrategyPatterSolve\obj\Debug\net8.0\StrategyPatterSolve.csproj.CoreCompileInputs.cache
+C:\Users\kaueo\source\repos\StrategyPatterSolve\StrategyPatterSolve\obj\Debug\net8.0\StrategyPatterSolve.dll
+C:\Users\kaueo\source\repos\StrategyPatterSolve\StrategyPatterSolve\obj\Debug\net8.0\refint\StrategyPatterSolve.dll
+C:\Users\kaueo\source\repos\StrategyPatterSolve\StrategyPatterSolve\obj\Debug\net8.0\StrategyPatterSolve.pdb
+C:\Users\kaueo\source\repos\StrategyPatterSolve\StrategyPatterSolve\obj\Debug\net8.0\StrategyPatterSolve.genruntimeconfig.cache
+C:\Users\kaueo\source\repos\StrategyPatterSolve\StrategyPatterSolve\obj\Debug\net8.0\ref\StrategyPatterSolve.dll
