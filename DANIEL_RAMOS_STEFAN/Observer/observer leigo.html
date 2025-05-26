@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Canal de Vídeos - Versão Leiga</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background: #f4f4f4;
+				padding: 40px;
+			}
+
+			.container {
+				max-width: 600px;
+				margin: auto;
+				background: white;
+				padding: 20px;
+				border-radius: 8px;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+			}
+
+			h2 {
+				text-align: center;
+			}
+
+			input,
+			button {
+				display: block;
+				width: 100%;
+				padding: 10px;
+				margin-top: 10px;
+				font-size: 16px;
+			}
+
+			button {
+				background-color: #007bff;
+				color: white;
+				border: none;
+				border-radius: 5px;
+			}
+
+			button:hover {
+				background-color: #0056b3;
+			}
+
+			.list {
+				margin-top: 20px;
+				padding: 10px;
+				background: #f9f9f9;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				max-height: 150px;
+				overflow-y: auto;
+			}
+
+			.list ul {
+				list-style: none;
+				padding-left: 0;
+			}
+
+			.list li {
+				padding: 5px;
+				border-bottom: 1px solid #eee;
+			}
+
+			.list li:last-child {
+				border-bottom: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h2>Canal de Vídeos</h2>
+
+			<input type="text" id="nomeInscricao" placeholder="Nome para inscrever" />
+			<button onclick="inscrever()">Inscrever</button>
+
+			<input
+				type="text"
+				id="nomeDesinscricao"
+				placeholder="Nome para desinscrever"
+			/>
+			<button onclick="desinscrever()">Desinscrever</button>
+
+			<button onclick="postarVideo()">Postar Novo Vídeo</button>
+
+			<div class="list">
+				<strong>Inscritos:</strong>
+				<ul id="listaInscritos"></ul>
+			</div>
+
+			<div class="list">
+				<strong>Notificações:</strong>
+				<ul id="logNotificacoes"></ul>
+			</div>
+		</div>
+
+		<script>
+			const inscritos = [];
+
+			function inscrever() {
+				const nome = document.getElementById("nomeInscricao").value.trim();
+				if (nome && !inscritos.includes(nome)) {
+					inscritos.push(nome);
+					atualizarLista();
+				}
+				document.getElementById("nomeInscricao").value = "";
+			}
+
+			function desinscrever() {
+				const nome = document.getElementById("nomeDesinscricao").value.trim();
+				const index = inscritos.indexOf(nome);
+				if (index !== -1) {
+					inscritos.splice(index, 1);
+					atualizarLista();
+				}
+				document.getElementById("nomeDesinscricao").value = "";
+			}
+
+			function postarVideo() {
+				const log = document.getElementById("logNotificacoes");
+				log.innerHTML = "";
+
+				for (let i = 0; i < inscritos.length; i++) {
+					const li = document.createElement("li");
+					li.textContent = `🔔 ${inscritos[i]}, novo vídeo postado!`;
+					log.appendChild(li);
+				}
+			}
+
+			function atualizarLista() {
+				const ul = document.getElementById("listaInscritos");
+				ul.innerHTML = "";
+				for (let i = 0; i < inscritos.length; i++) {
+					const li = document.createElement("li");
+					li.textContent = inscritos[i];
+					ul.appendChild(li);
+				}
+			}
+		</script>
+	</body>
+</html>
