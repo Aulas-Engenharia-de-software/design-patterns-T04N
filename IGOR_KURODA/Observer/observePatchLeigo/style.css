@@ -1,0 +1,62 @@
+:root {
+	--color-primary: #f79b72;
+	--color-dark: #2a4759;
+	--color-light: #dddddd;
+	--color-background: #eeeeee;
+}
+
+body {
+	font-family: "Segoe UI", sans-serif;
+	background: var(--color-background);
+	color: var(--color-dark);
+	padding: 2rem;
+	margin: 0;
+}
+
+h1 {
+	color: var(--color-primary);
+	margin-bottom: 1rem;
+}
+
+input,
+button {
+	padding: 0.5rem 0.75rem;
+	margin-right: 0.5rem;
+	border: 1px solid var(--color-light);
+	border-radius: 4px;
+	font-size: 1rem;
+}
+
+input {
+	background-color: #fff;
+	color: var(--color-dark);
+}
+
+button {
+	background-color: var(--color-primary);
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	border: none;
+}
+
+button:hover {
+	background-color: #e27d56;
+}
+
+#log {
+	margin-top: 1.5rem;
+	background: white;
+	border: 1px solid var(--color-light);
+	padding: 1rem;
+	max-height: 300px;
+	overflow-y: auto;
+	white-space: pre-wrap;
+	font-size: 0.95rem;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(42, 71, 89, 0.1);
+}
+
+.section {
+	margin-bottom: 1.5rem;
+}

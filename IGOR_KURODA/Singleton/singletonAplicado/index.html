@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Configurações</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>🎮 Configurações do Jogo</h1>
+
+		<div class="section">
+			<label for="difficulty">Dificuldade:</label>
+			<select id="difficulty">
+				<option value="fácil">Fácil</option>
+				<option value="médio">Médio</option>
+				<option value="difícil">Difícil</option>
+			</select>
+			<button onclick="applySettings()">Aplicar</button>
+		</div>
+
+		<div class="section">
+			<button onclick="showSettings()">Mostrar Configuração Atual</button>
+			<pre id="log"></pre>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
