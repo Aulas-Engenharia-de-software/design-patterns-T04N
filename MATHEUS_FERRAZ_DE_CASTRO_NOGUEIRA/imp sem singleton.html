@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema sem Singleton</title>
+</head>
+<body>
+  <h1>Configurações do Aplicativo</h1>
+  <div id="configDisplay"></div>
+  <button id="changeTheme">Alterar Tema</button>
+
+  <script src="config.js"></script>
+  <script>
+    // Uso do sistema de configuração
+    const configDisplay = document.getElementById('configDisplay');
+    const changeThemeBtn = document.getElementById('changeTheme');
+    
+    function displayConfig() {
+      const config = getConfig();
+      configDisplay.innerHTML = `
+        <p>Tema: ${config.theme}</p>
+        <p>Idioma: ${config.language}</p>
+        <p>API: ${config.apiUrl}</p>
+      `;
+    }
+    
+    changeThemeBtn.addEventListener('click', () => {
+      updateConfig({ theme: appConfig.theme === 'light' ? 'dark' : 'light' });
+      displayConfig();
+      
+      // Problema: Alguém pode acidentalmente criar outra instância
+      const rogueConfig = { ...getConfig() };
+      rogueConfig.apiUrl = 'https://malicious.api';
+      console.log('Configuração violada:', rogueConfig);
+    });
+    
+    displayConfig();
+  </script>
+</body>
+</html>

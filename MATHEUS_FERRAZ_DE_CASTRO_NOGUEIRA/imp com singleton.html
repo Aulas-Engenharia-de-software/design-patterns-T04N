@@ -1,0 +1,60 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema com Singleton</title>
+</head>
+<body>
+  <h1>Configurações do Aplicativo</h1>
+  <div id="configDisplay"></div>
+  <button id="changeTheme">Alterar Tema</button>
+  <button id="changeLanguage">Alterar Idioma</button>
+
+  <script src="config.js"></script>
+  <script>
+    // Uso do Singleton
+    const configDisplay = document.getElementById('configDisplay');
+    const changeThemeBtn = document.getElementById('changeTheme');
+    const changeLanguageBtn = document.getElementById('changeLanguage');
+    
+    // Sempre obtemos a mesma instância
+    const config = AppConfig.getInstance();
+    
+    function displayConfig() {
+      const currentConfig = config.get();
+      configDisplay.innerHTML = `
+        <p>Tema: ${currentConfig.theme}</p>
+        <p>Idioma: ${currentConfig.language}</p>
+        <p>API: ${currentConfig.apiUrl}</p>
+      `;
+      
+      // Aplicando o tema
+      document.body.style.backgroundColor = 
+        currentConfig.theme === 'light' ? '#fff' : '#333';
+      document.body.style.color = 
+        currentConfig.theme === 'light' ? '#000' : '#fff';
+    }
+    
+    changeThemeBtn.addEventListener('click', () => {
+      config.update({ theme: config.theme === 'light' ? 'dark' : 'light' });
+      displayConfig();
+    });
+    
+    changeLanguageBtn.addEventListener('click', () => {
+      const newLang = config.language === 'pt-BR' ? 'en-US' : 'pt-BR';
+      config.update({ language: newLang });
+      displayConfig();
+    });
+    
+    // Tentativa de criar nova instância (não funciona)
+    try {
+      const rogueConfig = new AppConfig(); // Erro
+    } catch (e) {
+      console.log('Não é possível criar nova instância:', e.message);
+    }
+    
+    displayConfig();
+  </script>
+</body>
+</html>
