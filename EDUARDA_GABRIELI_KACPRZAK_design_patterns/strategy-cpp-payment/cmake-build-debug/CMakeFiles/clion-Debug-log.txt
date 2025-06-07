@@ -1,0 +1,4 @@
+/Users/duardakacpk/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/duardakacpk/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/duardakacpk/CLionProjects/EDUARDA_GABRIELI_KACPRZAK/SINGLETON/com-singleton -B /Users/duardakacpk/CLionProjects/EDUARDA_GABRIELI_KACPRZAK/SINGLETON/com-singleton/cmake-build-debug
+-- Configuring done (0.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/duardakacpk/CLionProjects/EDUARDA_GABRIELI_KACPRZAK/SINGLETON/com-singleton/cmake-build-debug
