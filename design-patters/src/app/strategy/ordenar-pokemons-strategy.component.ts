@@ -48,7 +48,7 @@ export class OrdenarPokemonsStrategyComponent {
        
         const tipo = (event.target as HTMLSelectElement).value;
 
-        
+      
         if (tipo === 'peso') {
             this.estrategia = new OrdenarPorPeso();
         } else {
