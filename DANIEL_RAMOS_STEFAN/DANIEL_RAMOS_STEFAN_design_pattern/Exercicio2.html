@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Exemplo Singleton</title>
+	</head>
+	<body>
+		<h1>Exemplo de Singleton</h1>
+
+		<p id="valor">Valor: 0</p>
+
+		<button id="botaoIncrementar">Incrementar Valor</button>
+		<button id="botaoMostrar">Mostrar Valor</button>
+
+		<script>
+			class Singleton {
+				static instancia;
+				valor = 0;
+
+				constructor() {
+					if (Singleton.instancia) {
+						return Singleton.instancia;
+					}
+					console.log("Instância única criada.");
+					Singleton.instancia = this;
+				}
+
+				static obterInstancia() {
+					if (!Singleton.instancia) {
+						Singleton.instancia = new Singleton();
+					}
+					return Singleton.instancia;
+				}
+
+				mostrarValor() {
+					return this.valor;
+				}
+
+				incrementarValor() {
+					this.valor += 1;
+				}
+			}
+
+			const botaoIncrementar = document.getElementById("botaoIncrementar");
+			const botaoMostrar = document.getElementById("botaoMostrar");
+			const paragrafoValor = document.getElementById("valor");
+
+			botaoIncrementar.addEventListener("click", () => {
+				const singleton = Singleton.obterInstancia();
+				singleton.incrementarValor();
+			});
+
+			botaoMostrar.addEventListener("click", () => {
+				const singleton = Singleton.obterInstancia();
+				paragrafoValor.textContent = `Valor: ${singleton.mostrarValor()}`;
+			});
+		</script>
+	</body>
+</html>
