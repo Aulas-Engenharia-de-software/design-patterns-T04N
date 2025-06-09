@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "StratetyCalculator/1.0.0": {
+        "runtime": {
+          "StratetyCalculator.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StratetyCalculator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = StrategyPatternRaw
-build_property.ProjectDir = C:\Users\kaueo\Source\Repos\design-patterns-T04N\KAUE_ORLANDINI\StrategyPatternRaw\StrategyPatternRaw\
+build_property.ProjectDir = C:\Users\kaueo\source\repos\design-patterns-T04N\KAUE_ORLANDINI\StrategyPatternRaw\StrategyPatternRaw\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

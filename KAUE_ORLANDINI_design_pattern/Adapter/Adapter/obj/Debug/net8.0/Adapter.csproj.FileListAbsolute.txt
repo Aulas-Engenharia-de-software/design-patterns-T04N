@@ -1,0 +1,14 @@
+C:\Users\kaueo\source\repos\Adapter\Adapter\bin\Debug\net8.0\Adapter.exe
+C:\Users\kaueo\source\repos\Adapter\Adapter\bin\Debug\net8.0\Adapter.deps.json
+C:\Users\kaueo\source\repos\Adapter\Adapter\bin\Debug\net8.0\Adapter.runtimeconfig.json
+C:\Users\kaueo\source\repos\Adapter\Adapter\bin\Debug\net8.0\Adapter.dll
+C:\Users\kaueo\source\repos\Adapter\Adapter\bin\Debug\net8.0\Adapter.pdb
+C:\Users\kaueo\source\repos\Adapter\Adapter\obj\Debug\net8.0\Adapter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaueo\source\repos\Adapter\Adapter\obj\Debug\net8.0\Adapter.AssemblyInfoInputs.cache
+C:\Users\kaueo\source\repos\Adapter\Adapter\obj\Debug\net8.0\Adapter.AssemblyInfo.cs
+C:\Users\kaueo\source\repos\Adapter\Adapter\obj\Debug\net8.0\Adapter.csproj.CoreCompileInputs.cache
+C:\Users\kaueo\source\repos\Adapter\Adapter\obj\Debug\net8.0\Adapter.dll
+C:\Users\kaueo\source\repos\Adapter\Adapter\obj\Debug\net8.0\refint\Adapter.dll
+C:\Users\kaueo\source\repos\Adapter\Adapter\obj\Debug\net8.0\Adapter.pdb
+C:\Users\kaueo\source\repos\Adapter\Adapter\obj\Debug\net8.0\Adapter.genruntimeconfig.cache
+C:\Users\kaueo\source\repos\Adapter\Adapter\obj\Debug\net8.0\ref\Adapter.dll
