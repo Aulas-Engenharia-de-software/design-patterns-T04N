@@ -1,0 +1,18 @@
+function ApiExterna() {
+  this.getData = function() {
+    return "Dados vindos da API externa";
+  };
+}
+
+function ApiAdapter(apiExterna) {
+  this.apiExterna = apiExterna;
+
+  this.buscarDados = function() {
+    return this.apiExterna.getData();
+  };
+}
+
+let apiExterna = new ApiExterna();
+let adapter = new ApiAdapter(apiExterna);
+
+console.log(adapter.buscarDados());
