@@ -6,6 +6,7 @@ public class Main {
 
         Usuario bernardo = new Usuario("Bernardo");
         Usuario lucas = new Usuario("Lucas");
+        Usuario rafael = new Usuario("Rafael");
 
         servidor.adicionarUsuario(bernardo);
         servidor.adicionarUsuario(lucas);

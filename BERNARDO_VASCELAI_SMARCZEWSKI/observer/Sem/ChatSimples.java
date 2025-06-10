@@ -7,6 +7,7 @@ public class ChatSimples {
         ArrayList<String> usuarios = new ArrayList<>();
         usuarios.add("João");
         usuarios.add("Maria");
+        usuarios.add("Jorge");
 
         String mensagem = "Olá, mundo!";
         for (String usuario : usuarios) {
