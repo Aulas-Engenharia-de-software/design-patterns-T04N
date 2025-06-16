@@ -7,7 +7,6 @@ class App {
     this.central = new CentralEmergencia(this.log.bind(this));
     this.init();
   }
-
   init() {
     this.container.innerHTML = `
       <h3>Adicionar Setor</h3>
