@@ -9,12 +9,12 @@ class PagamentoApp extends StatelessWidget {
   }
 }
 
-// Product
+// Produto
 abstract class Pagamento {
   String processarPagamento(String valor);
 }
 
-// ConcreteProduct
+// Produto Concreto
 class PagamentoPix implements Pagamento {
   @override
   String processarPagamento(String valor) {
@@ -22,7 +22,7 @@ class PagamentoPix implements Pagamento {
   }
 }
 
-// Creator
+//Fabrica Abstrata
 abstract class PagamentoFactory {
   Pagamento criarPagamento();
 }
@@ -33,6 +33,7 @@ class PixFactory implements PagamentoFactory {
   Pagamento criarPagamento() => PagamentoPix();
 }
 
+// Interface FLutter
 class PagamentoTela extends StatefulWidget {
   @override
   _PagamentoTelaState createState() => _PagamentoTelaState();

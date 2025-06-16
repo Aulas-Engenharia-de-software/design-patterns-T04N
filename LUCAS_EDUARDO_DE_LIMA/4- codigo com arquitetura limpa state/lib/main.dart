@@ -9,12 +9,12 @@ class PagamentoApp extends StatelessWidget {
   }
 }
 
-// State
+// interface state
 abstract class EstadoPagamento {
   String pagar(String valor);
 }
 
-// ConcreteStates
+// estados concretos
 class EstadoInicial implements EstadoPagamento {
   @override
   String pagar(String valor) => 'Processando pagamento de R\$ $valor...';
@@ -25,7 +25,7 @@ class EstadoConcluido implements EstadoPagamento {
   String pagar(String valor) => 'Pagamento de R\$ $valor concluído!';
 }
 
-// Context
+// armazena o estado atual
 class PagamentoContexto {
   late EstadoPagamento _estado;
 
@@ -52,6 +52,7 @@ class _PagamentoTelaState extends State<PagamentoTela> {
   final PagamentoContexto _contexto = PagamentoContexto();
   String _mensagem = '';
 
+  //Interface Flutter
   void _pagar() {
     String valor = _controller.text;
     String mensagemInicial = _contexto.realizarPagamento(valor);
