@@ -1,0 +1,10 @@
+{
+  "users": [
+    { "id": 1, "name": "João", "picture": "https://randomuser.me/api/portraits/men/29.jpg" },
+    { "id": 2, "name": "Maria", "picture": "https://randomuser.me/api/portraits/women/63.jpg" },
+    { "id": 3, "name": "Ana", "picture": "https://randomuser.me/api/portraits/women/44.jpg" },
+    { "id": 4, "name": "Paulo", "picture": "https://randomuser.me/api/portraits/men/90.jpg" },
+    { "id": 5, "name": "Claudia", "picture": "https://randomuser.me/api/portraits/women/68.jpg" },
+    { "id": 6, "name": "Marcos", "picture": "https://randomuser.me/api/portraits/men/37.jpg" }
+  ]
+}
