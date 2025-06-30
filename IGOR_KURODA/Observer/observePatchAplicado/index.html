@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Patch Notes</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>🕹️ Upload de Patch Notes</h1>
+
+		<div class="section">
+			<input type="text" id="playerName" placeholder="Nickname" />
+			<button onclick="subscribePlayer()">Inscrever</button>
+			<button onclick="unsubscribePlayer()">Desinscrever</button>
+		</div>
+
+		<div class="section">
+			<input
+				type="text"
+				id="patchNoteText"
+				placeholder="Conteúdo da atualização"
+			/>
+			<button onclick="publishPatchNote()">Publicar Patch Note</button>
+		</div>
+
+		<div class="section">
+			<h3>📜 Log:</h3>
+			<div id="log"></div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
