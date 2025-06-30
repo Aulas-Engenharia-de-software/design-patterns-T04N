@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeteria Decorator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Cafeteria</h1>
+
+        <div class="card">
+            <h2>Faça seu Pedido</h2>
+            <div class="form-group">
+                <h3>Selecione o Café:</h3>
+                <label>
+                    <input type="radio" name="coffeeType" value="simple" checked> Café Simples (R$ 5.00)
+                </label>
+                <label>
+                    <input type="radio" name="coffeeType" value="espresso"> Café Espresso (R$ 7.50)
+                </label>
+            </div>
+
+            <div class="form-group">
+                <h3>Adicione Complementos:</h3>
+                <label>
+                    <input type="checkbox" name="milk" id="milk"> Leite (R$ 2.00)
+                </label>
+                <label>
+                    <input type="checkbox" name="whip" id="whip"> Chantilly (R$ 3.00)
+                </label>
+                <label>
+                    <input type="checkbox" name="chocolate" id="chocolate"> Chocolate (R$ 2.50)
+                </label>
+            </div>
+
+            <div class="buttons">
+                <button id="calculateOrder">Calcular Pedido</button>
+                <button id="resetOrder">Novo Pedido</button>
+            </div>
+        </div>
+
+        <div class="card" id="receiptCard" style="display: none;">
+            <h2>Seu Pedido</h2>
+            <p><strong>Descrição:</strong> <span id="orderDescription"></span></p>
+            <p><strong>Custo Total:</strong> R$ <span id="orderCost"></span></p>
+        </div>
+    </div>
+
+    <script src="models/Coffe.js"></script>
+    <script src="models/SimpleCoffee.js"></script>
+    <script src="models/Espresso.js"></script>
+    <script src="models/CoffeeDecorator.js"></script>
+    <script src="models/MilkDecorator.js"></script>
+    <script src="models/WhipDecorator.js"></script>
+    <script src="models/ChocolateDecorator.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

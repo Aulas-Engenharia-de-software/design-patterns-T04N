@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Factory Method - Notificações</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Notificador com Factory Method</h1>
+  <div class="buttons">
+    <button onclick="handleNotification('email')">Notificar por Email</button>
+    <button class="sms" onclick="handleNotification('sms')">Notificar por SMS</button>
+  </div>
+
+  <div id="notification" class="notification"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

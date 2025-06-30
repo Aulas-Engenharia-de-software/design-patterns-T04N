@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button.sms {
+  background-color: #2196f3;
+}
+
+.notification {
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 400px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  display: none;
+}
+
+.email-notification {
+  background-color: #4caf50;
+}
+
+.sms-notification {
+  background-color: #2196f3;
+}
