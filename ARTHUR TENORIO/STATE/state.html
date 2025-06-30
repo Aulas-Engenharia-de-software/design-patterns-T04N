@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contador com Estado</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="valor">Contador: 0</h1>
+    <button id="btn-incrementar">Incrementar</button>
+    <button id="btn-decrementar">Decrementar</button>
+
+    <script>
+      let estado = {
+        contador: 0,
+      };
+
+      function render() {
+        document.getElementById("valor").textContent =
+          "Contador: " + estado.contador;
+      }
+
+      document
+        .getElementById("btn-incrementar")
+        .addEventListener("click", () => {
+          estado.contador++;
+          render();
+        });
+
+      document
+        .getElementById("btn-decrementar")
+        .addEventListener("click", () => {
+          estado.contador--;
+          render();
+        });
+
+      render();
+    </script>
+  </body>
+</html>
