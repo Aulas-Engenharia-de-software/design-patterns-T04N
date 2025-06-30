@@ -1,0 +1,14 @@
+C:\Users\kaueo\source\repos\StatePatternRaw\StatePatternRaw\bin\Debug\net8.0\StatePatternRaw.exe
+C:\Users\kaueo\source\repos\StatePatternRaw\StatePatternRaw\bin\Debug\net8.0\StatePatternRaw.deps.json
+C:\Users\kaueo\source\repos\StatePatternRaw\StatePatternRaw\bin\Debug\net8.0\StatePatternRaw.runtimeconfig.json
+C:\Users\kaueo\source\repos\StatePatternRaw\StatePatternRaw\bin\Debug\net8.0\StatePatternRaw.dll
+C:\Users\kaueo\source\repos\StatePatternRaw\StatePatternRaw\bin\Debug\net8.0\StatePatternRaw.pdb
+C:\Users\kaueo\source\repos\StatePatternRaw\StatePatternRaw\obj\Debug\net8.0\StatePatternRaw.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaueo\source\repos\StatePatternRaw\StatePatternRaw\obj\Debug\net8.0\StatePatternRaw.AssemblyInfoInputs.cache
+C:\Users\kaueo\source\repos\StatePatternRaw\StatePatternRaw\obj\Debug\net8.0\StatePatternRaw.AssemblyInfo.cs
+C:\Users\kaueo\source\repos\StatePatternRaw\StatePatternRaw\obj\Debug\net8.0\StatePatternRaw.csproj.CoreCompileInputs.cache
+C:\Users\kaueo\source\repos\StatePatternRaw\StatePatternRaw\obj\Debug\net8.0\StatePatternRaw.dll
+C:\Users\kaueo\source\repos\StatePatternRaw\StatePatternRaw\obj\Debug\net8.0\refint\StatePatternRaw.dll
+C:\Users\kaueo\source\repos\StatePatternRaw\StatePatternRaw\obj\Debug\net8.0\StatePatternRaw.pdb
+C:\Users\kaueo\source\repos\StatePatternRaw\StatePatternRaw\obj\Debug\net8.0\StatePatternRaw.genruntimeconfig.cache
+C:\Users\kaueo\source\repos\StatePatternRaw\StatePatternRaw\obj\Debug\net8.0\ref\StatePatternRaw.dll

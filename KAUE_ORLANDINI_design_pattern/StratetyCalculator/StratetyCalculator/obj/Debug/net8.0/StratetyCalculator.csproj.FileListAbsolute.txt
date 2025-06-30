@@ -1,0 +1,14 @@
+C:\Users\kaueo\source\repos\StratetyCalculator\StratetyCalculator\bin\Debug\net8.0\StratetyCalculator.exe
+C:\Users\kaueo\source\repos\StratetyCalculator\StratetyCalculator\bin\Debug\net8.0\StratetyCalculator.deps.json
+C:\Users\kaueo\source\repos\StratetyCalculator\StratetyCalculator\bin\Debug\net8.0\StratetyCalculator.runtimeconfig.json
+C:\Users\kaueo\source\repos\StratetyCalculator\StratetyCalculator\bin\Debug\net8.0\StratetyCalculator.dll
+C:\Users\kaueo\source\repos\StratetyCalculator\StratetyCalculator\bin\Debug\net8.0\StratetyCalculator.pdb
+C:\Users\kaueo\source\repos\StratetyCalculator\StratetyCalculator\obj\Debug\net8.0\StratetyCalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaueo\source\repos\StratetyCalculator\StratetyCalculator\obj\Debug\net8.0\StratetyCalculator.AssemblyInfoInputs.cache
+C:\Users\kaueo\source\repos\StratetyCalculator\StratetyCalculator\obj\Debug\net8.0\StratetyCalculator.AssemblyInfo.cs
+C:\Users\kaueo\source\repos\StratetyCalculator\StratetyCalculator\obj\Debug\net8.0\StratetyCalculator.csproj.CoreCompileInputs.cache
+C:\Users\kaueo\source\repos\StratetyCalculator\StratetyCalculator\obj\Debug\net8.0\StratetyCalculator.dll
+C:\Users\kaueo\source\repos\StratetyCalculator\StratetyCalculator\obj\Debug\net8.0\refint\StratetyCalculator.dll
+C:\Users\kaueo\source\repos\StratetyCalculator\StratetyCalculator\obj\Debug\net8.0\StratetyCalculator.pdb
+C:\Users\kaueo\source\repos\StratetyCalculator\StratetyCalculator\obj\Debug\net8.0\StratetyCalculator.genruntimeconfig.cache
+C:\Users\kaueo\source\repos\StratetyCalculator\StratetyCalculator\obj\Debug\net8.0\ref\StratetyCalculator.dll
