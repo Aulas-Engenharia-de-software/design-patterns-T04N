@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Canal de Vídeos - Observer</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			body {
+				font-family: "Inter", sans-serif;
+				background-color: #f0f2f5;
+				padding: 40px;
+				color: #333;
+			}
+
+			h1 {
+				text-align: center;
+				margin-bottom: 30px;
+			}
+
+			.container {
+				max-width: 600px;
+				margin: 0 auto;
+				background: #fff;
+				padding: 25px;
+				border-radius: 10px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+			}
+
+			input,
+			button {
+				font-size: 16px;
+				padding: 10px;
+				margin: 5px 0;
+				width: 100%;
+				box-sizing: border-box;
+			}
+
+			button {
+				background-color: #007bff;
+				color: white;
+				border: none;
+				border-radius: 5px;
+				transition: background 0.3s;
+			}
+
+			button:hover {
+				background-color: #0056b3;
+			}
+
+			.section {
+				margin-top: 25px;
+			}
+
+			.list {
+				background: #f9f9f9;
+				border: 1px solid #ddd;
+				padding: 10px;
+				border-radius: 8px;
+				max-height: 150px;
+				overflow-y: auto;
+			}
+
+			.list ul {
+				list-style: none;
+				padding-left: 0;
+				margin: 0;
+			}
+
+			.list li {
+				padding: 5px 0;
+				border-bottom: 1px solid #eee;
+			}
+
+			.list li:last-child {
+				border-bottom: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Canal de Vídeos</h1>
+
+			<div>
+				<input
+					type="text"
+					id="nomeInscricao"
+					placeholder="Digite o nome para se inscrever"
+				/>
+				<button onclick="inscrever()">Inscrever</button>
+			</div>
+
+			<div class="section">
+				<input
+					type="text"
+					id="nomeDesinscricao"
+					placeholder="Digite o nome para desinscrever"
+				/>
+				<button onclick="desinscrever()">Desinscrever</button>
+			</div>
+
+			<div class="section">
+				<button onclick="postarVideo()"> Postar Novo Vídeo</button>
+			</div>
+
+			<div class="section list">
+				<strong> Inscritos:</strong>
+				<ul id="listaInscritos"></ul>
+			</div>
+
+			<div class="section list">
+				<strong> Notificações:</strong>
+				<ul id="logNotificacoes"></ul>
+			</div>
+		</div>
+
+		<script>
+			class CanalDeVideo {
+				constructor() {
+					this.inscritos = [];
+				}
+
+				inscrever(nome) {
+					if (!this.inscritos.includes(nome)) {
+						this.inscritos.push(nome);
+						this.atualizarLista();
+					}
+				}
+
+				desinscrever(nome) {
+					this.inscritos = this.inscritos.filter((user) => user !== nome);
+					this.atualizarLista();
+				}
+
+				postarVideo() {
+					const log = document.getElementById("logNotificacoes");
+					log.innerHTML = "";
+					this.inscritos.forEach((inscrito) => {
+						const item = document.createElement("li");
+						item.textContent = ` ${inscrito}, um novo vídeo foi postado!`;
+						log.appendChild(item);
+					});
+				}
+
+				atualizarLista() {
+					const ul = document.getElementById("listaInscritos");
+					ul.innerHTML = "";
+					this.inscritos.forEach((nome) => {
+						const li = document.createElement("li");
+						li.textContent = nome;
+						ul.appendChild(li);
+					});
+				}
+			}
+
+			const canal = new CanalDeVideo();
+
+			function inscrever() {
+				const nome = document.getElementById("nomeInscricao").value.trim();
+				if (nome) {
+					canal.inscrever(nome);
+					document.getElementById("nomeInscricao").value = "";
+				}
+			}
+
+			function desinscrever() {
+				const nome = document.getElementById("nomeDesinscricao").value.trim();
+				if (nome) {
+					canal.desinscrever(nome);
+					document.getElementById("nomeDesinscricao").value = "";
+				}
+			}
+
+			function postarVideo() {
+				canal.postarVideo();
+			}
+		</script>
+	</body>
+</html>

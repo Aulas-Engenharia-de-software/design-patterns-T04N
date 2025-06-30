@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Singleton - Tema do Site</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				text-align: center;
+				padding: 40px;
+				transition: background 0.3s, color 0.3s;
+			}
+
+			.claro {
+				background-color: #ffffff;
+				color: #000000;
+			}
+
+			.escuro {
+				background-color: #1e1e1e;
+				color: #ffffff;
+			}
+
+			button {
+				padding: 10px 20px;
+				margin: 10px;
+				font-size: 16px;
+				cursor: pointer;
+			}
+
+			#status {
+				margin-top: 20px;
+				padding: 10px;
+				font-size: 18px;
+				border-radius: 5px;
+				transition: background 0.3s, color 0.3s;
+			}
+
+			.claro #status {
+				background: #f5f5f5;
+				border: 1px solid #ccc;
+				color: #000;
+			}
+
+			.escuro #status {
+				background: #333;
+				border: 1px solid #555;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body class="claro">
+		<h2>Gerenciador de Tema com Singleton</h2>
+		<button onclick="mudarTema('claro')">Tema Claro</button>
+		<button onclick="mudarTema('escuro')">Tema Escuro</button>
+		<div id="status">Tema atual: Claro</div>
+
+		<script>
+			class TemaManager {
+				static instancia;
+
+				constructor() {
+					if (TemaManager.instancia) {
+						return TemaManager.instancia;
+					}
+
+					this.temaAtual = "claro";
+					TemaManager.instancia = this;
+				}
+
+				aplicarTema(tema) {
+					this.temaAtual = tema;
+					document.body.className = tema;
+					document.getElementById("status").textContent = `Tema atual: ${
+						tema.charAt(0).toUpperCase() + tema.slice(1)
+					}`;
+				}
+
+				static getInstancia() {
+					if (!TemaManager.instancia) {
+						new TemaManager();
+					}
+					return TemaManager.instancia;
+				}
+			}
+
+			function mudarTema(tema) {
+				const temaManager = TemaManager.getInstancia();
+				temaManager.aplicarTema(tema);
+			}
+		</script>
+	</body>
+</html>
