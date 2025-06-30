@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
+
 class PaymentScreen extends StatelessWidget {
   final double amount;
 
   const PaymentScreen({required this.amount, Key? key}) : super(key: key);
+
+
 
   @override
   Widget build(BuildContext context) {

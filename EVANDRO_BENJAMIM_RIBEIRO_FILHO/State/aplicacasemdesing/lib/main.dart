@@ -8,16 +8,19 @@ void main() {
   ));
 }
 
+
 class PaymentHome extends StatefulWidget {
   @override
   _PaymentHomeState createState() => _PaymentHomeState();
 }
 
 class _PaymentHomeState extends State<PaymentHome> {
+
   final TextEditingController _amountController = TextEditingController();
 
   void _navigateToPaymentScreen() {
     final amountText = _amountController.text.trim();
+
     if (amountText.isEmpty) return;
 
     final amount = double.tryParse(amountText);
@@ -31,6 +34,7 @@ class _PaymentHomeState extends State<PaymentHome> {
     );
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,12 +43,14 @@ class _PaymentHomeState extends State<PaymentHome> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
+
             TextField(
               controller: _amountController,
               keyboardType: TextInputType.numberWithOptions(decimal: true),
               decoration: InputDecoration(labelText: 'Valor do pagamento'),
             ),
             SizedBox(height: 20),
+
             ElevatedButton(
               onPressed: _navigateToPaymentScreen,
               child: Text('Pagar'),
@@ -54,6 +60,7 @@ class _PaymentHomeState extends State<PaymentHome> {
       ),
     );
   }
+
 
   @override
   void dispose() {

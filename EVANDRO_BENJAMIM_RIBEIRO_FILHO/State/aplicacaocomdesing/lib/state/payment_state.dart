@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'payment_context.dart';
 
+
+
 abstract class PaymentState {
   Widget buildUI(BuildContext context, TextEditingController controller, PaymentContext paymentContext);
 }
+
+
 
 class EnterAmountState extends PaymentState {
   @override
@@ -37,6 +41,7 @@ class EnterAmountState extends PaymentState {
   }
 }
 
+
 class ProcessingPaymentState extends PaymentState {
   @override
   Widget buildUI(BuildContext context, TextEditingController controller, PaymentContext paymentContext) {
@@ -49,6 +54,8 @@ class ProcessingPaymentState extends PaymentState {
     );
   }
 }
+
+//Exibe uma mensagem de sucesso com o valor pago.
 
 class SuccessPaymentState extends PaymentState {
   @override
